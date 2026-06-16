@@ -2,6 +2,8 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { Menu, X } from "lucide-vue-next";
 
+import logoUrl from "@/assets/logo.svg";
+
 const links = [
   { href: "/#mission", label: "Mission" },
   { href: "/#focus", label: "Focus" },
@@ -38,12 +40,19 @@ onBeforeUnmount(() => {
     "
   >
     <div class="container-page flex h-16 items-center justify-between md:h-20">
-      <a href="/" class="flex items-baseline gap-2">
-        <span class="font-display text-xl font-black text-terracotta md:text-2xl">
-          Dream<span class="text-terracotta">Hatch</span>
-        </span>
-        <span class="hidden text-xs uppercase tracking-[0.2em] text-ink/60 sm:inline">
-          Kenya
+      <a href="/" class="flex items-center gap-3">
+        <img
+          :src="logoUrl"
+          alt="Dream Hatch Kenya"
+          class="size-9 shrink-0 drop-shadow-sm md:size-10"
+        />
+        <span class="flex flex-col leading-none">
+          <span class="font-display text-lg font-black text-terracotta md:text-xl">
+            Dream<span class="text-terracotta">Hatch</span>
+          </span>
+          <span class="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60 md:text-xs">
+            Kenya
+          </span>
         </span>
       </a>
 

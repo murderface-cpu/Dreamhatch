@@ -2,6 +2,8 @@
 import { ref } from "vue";
 import { useNewsletterStore } from "@/stores/newsletter";
 
+import logoUrl from "@/assets/logo.svg";
+
 const newsletter = useNewsletterStore();
 const email = ref("");
 const name = ref("");
@@ -22,8 +24,18 @@ async function onSubmit(e: Event) {
     <div class="container-page">
       <div class="grid gap-10 md:grid-cols-4">
         <div class="md:col-span-1">
-          <div class="font-display text-2xl font-black">
-            Dream<span class="text-sun">Hatch</span> Kenya
+          <div class="flex items-center gap-3">
+            <img
+              :src="logoUrl"
+              alt="Dream Hatch Kenya"
+              class="size-10 shrink-0 brightness-110"
+            />
+            <div class="font-display text-2xl font-black leading-none">
+              Dream<span class="text-sun">Hatch</span>
+              <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cream/60">
+                Kenya
+              </div>
+            </div>
           </div>
           <p class="mt-4 max-w-xs text-sm leading-relaxed text-cream/70">
             Empowering communities through art, health, education, and environmental sustainability.

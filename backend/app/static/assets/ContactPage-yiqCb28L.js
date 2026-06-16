@@ -1,0 +1,1 @@
+import{_ as e}from"./ContactSection.vue_vue_type_script_setup_true_lang-DUOgTvt4.js";import{d as a,a as t,f as o,o as s}from"./index-DOuWsG79.js";const n={class:"pt-24"},f=a({__name:"ContactPage",setup(c){return(_,r)=>(s(),t("main",n,[o(e)]))}});export{f as default};
