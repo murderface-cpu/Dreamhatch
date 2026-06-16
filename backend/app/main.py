@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.v1 import donations as donations_router
 from app.api.v1 import projects as projects_router
 from app.core.config import get_settings
 
@@ -34,6 +35,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(donations_router.router, prefix="/api/v1")
 app.include_router(projects_router.router, prefix="/api/v1")
 
 
