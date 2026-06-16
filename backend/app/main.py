@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1 import contact as contact_router
 from app.api.v1 import donations as donations_router
+from app.api.v1 import newsletter as newsletter_router
 from app.api.v1 import projects as projects_router
 from app.core.config import get_settings
 
@@ -38,6 +39,7 @@ app.add_middleware(
 
 app.include_router(contact_router.router, prefix="/api/v1")
 app.include_router(donations_router.router, prefix="/api/v1")
+app.include_router(newsletter_router.router, prefix="/api/v1")
 app.include_router(projects_router.router, prefix="/api/v1")
 
 
