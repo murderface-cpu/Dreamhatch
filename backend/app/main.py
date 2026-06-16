@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.v1 import admin as admin_router
 from app.api.v1 import auth as auth_router
 from app.api.v1 import contact as contact_router
 from app.api.v1 import donations as donations_router
@@ -38,6 +39,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(admin_router.router, prefix="/api/v1")
 app.include_router(auth_router.router, prefix="/api/v1")
 app.include_router(contact_router.router, prefix="/api/v1")
 app.include_router(donations_router.router, prefix="/api/v1")
