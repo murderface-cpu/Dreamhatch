@@ -1,3 +1,5 @@
 """ORM models. Import every model here so Alembic autogeneration sees them."""
 
-from app.models.donation import Donation  # noqa: F401
+from app.models.contact import ContactSubmission, ContactTopic  # noqa: F401
+from app.models.donation import Donation, DonationStatus  # noqa: F401
+from app.models.newsletter import NewsletterSubscriber  # noqa: F401
